@@ -23,35 +23,20 @@
       function dados(numCaras) {
         // funcion dados para el objeto
         this.numCaras = numCaras; //definimos numero de caras
-        this.dados = function () {
-          return this.numCaras;
+        this.tirar_dados = function () {
+          return Math.floor(Math.random() * this.numCaras) + 1 ; //devolvemos random
         };
       }
 
-      var numCaras1 = new dados(2); //dentro de la funcion dados tenemos 3 variables que son numCaras1, numCaras2 y numCaras3
-      var numCaras2 = new dados(6);
-      var numCaras3 = new dados(12);
+      var dado1 = new dados(2); //dentro de la funcion dados tenemos 3 variables que son numCaras1, numCaras2 y numCaras3
+      var dado2 = new dados(6);
+      var dado3 = new dados(12);
 
-      //console.log(numCaras1.dados());
-      //console.log(numCaras2.dados());
-      //console.log(numCaras3.dados());
+      console.log(dado1.tirar_dados());
+      console.log(dado2.tirar_dados());
+      console.log(dado3.tirar_dados());
 
-      function tirar_dado(tirada) {
-        //funcion para tirar los dados
-        var jugador = 1; //valor del jugador
-        var aleatorio = Math.floor(Math.random() * tirada) + 1; //valor de la aleatorio
-        //console.log(aleatorio);
-
-        if (jugador === aleatorio) {
-          //si valor jugador es igual a valor aleatorio
-          console.log("Has ganado");
-        } else {
-          console.log("Has perdido");
-        }
-      }
-      tirar_dado(numCaras1.dados()); //valores para la variable tirar_dado
-      tirar_dado(numCaras2.dados());
-      tirar_dado(numCaras3.dados());
+    
     </script>
   </body>
 </html>
