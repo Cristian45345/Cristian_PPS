@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <script>
+        //Variables
+        var x = 5;
+        /*
+        Tipo:
+        - null
+        - undefined
+        - string
+        - number (int float)
+        - boolean
+        - object
+        */
+        var a = null; //null
+        var b; //undefined
+        var c = "Alex"; //string
+        var d = 'Alex'; //string
+        var e = 5;  //int
+        var f = 5.5; //float
+        var g = true; //boolean
+        var h = {
+            nombre: "Alex",
+            surname: "Pons",
+            hasCar: true
+        }
+        console.log(h.hasCar);
+        var i = [3,"hola",5.5,true]; //array
+        console.log(i);
+
+        console.log("var c es de tipo", typeof c);
+        console.log("var c es de tipo", typeof e);
+        e = c + e;
+        console.log("var e es de tipo", typeof e);
+        /* Funciones */
+        function hola(){
+            return "hello1";
+        };
+        console.log(hola());
+
+        var j = function (){
+            return "hello2";
+        };
+        console.log(j());
+
+        var k  = {
+            name: "Alex",
+            surname: "Pons",
+            fullname: function(){
+                return this.name + ''  + this.surname;
+            }
+        }
+        console.log(k.fullname());
+
+        var l = hola;
+        var m = hola();
+
+        console.log(l(),m);
+    </script>
+</body>
+</html>

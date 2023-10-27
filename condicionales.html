@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+<body>
+    <script>
+        /*Condicionales*/
+        /* 
+        if(condicion lógica){
+            ...
+        } else {
+            ...
+        }
+
+        //else if
+        if(condicion lógica){
+            ...
+        } else if(condición 2) {
+            ...
+        }
+
+        //operador ternario
+        ?
+        var a = (3=="hola")?"adios":100;
+        */
+        var a = (3=="hola")?"adios":100;
+        console.log("a:", a);
+
+        /* Switch */
+        /*
+        switch(expresion){
+            case a: .... break;
+            case b: .... break;
+            case c: .... break;
+            default: ....;
+        }
+        */
+
+        var b = "hola";
+        var c = 5;
+        switch (b + c){
+            case 2: console.log("resultado es  2"); break;
+            case 9: console.log("resultado es 9"); break;
+            case "hola5": console.log("resultado es hola5"); break;
+            default:  console.log("Error")
+        }
+        /* Crear juego cara o cruz. Nosotros siempre cara = 1
+        El programa decidira aleatoriamente entre  1 y 2.
+        Si sale 1 win, si sale 2 perdemos.*/
+        /* math.random() */
+    </script>
+</body>
+</html>

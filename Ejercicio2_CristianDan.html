@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Nivel 1
+        var directo = "Ana"; //variable que almacena Ana
+        var inversa = ""; //variable que ara la inversa de Ana a anA
+        for(var i=0; i < directo.length; i++){ //recorremos Ana
+            inversa =  directo.charAt(i) + inversa; // lo inversamos con charAt
+            
+        }
+        //console.log(directo); //mostramos como esta Ana
+        //console.log(inversa); //mostramos la inversa de Ana a anA
+         if (directo.toLocaleLowerCase === inversa.toLocaleLowerCase){ //lo convertimos a minusculas con toLocaleLowerCase y comparamos si son iguales
+            console.log("Palindromo es de nivel 1");
+         } else {
+            console.log("Palindromo no es de nivel 1");
+         }
+
+        //Nivel 2
+        var directo2 = "A na" //Almacena A na
+        var input2= "" // para juntar A na
+        var inversa2 = "" //inversar Ana
+   
+        for(var i=0; i < directo2.length; i++){ //recorremos directo2
+            if (directo2.charAt(i) === ' '){ //si directo2 tiene espacios
+                //no hagas nada
+            } else {
+                input2 = directo2.charAt(i) + input2; //si no añadelo a input2
+            }
+        }
+
+        for(var i=0; i < input2.length; i++) { //recorremos input2 sin espacios
+            inversa2 = input2.charAt(i) + inversa2; //almacenamos en inversa2 lo de Ana
+        }
+        if (input2.toLocaleLowerCase === inversa2.toLocaleLowerCase){ //lo comparamos en minusculas
+            console.log("Palindromo es de nivel 2");
+         } else {
+            console.log("Palindromo no es de nivel 2");
+         }
+        //console.log(input2);
+        //console.log(inversa2);
+
+        //Nivel 3
+
+        var directo3 = "An á" //almacenamos An á en directo3
+        var input_sinespacios = "" //para quitar espacios
+        var inversa3 = "" //invertir orden
+
+        for(var i=0; i < directo3.length; i++){ //recorremos directo3
+            var letra = directo3.charAt(i).toLowerCase(); //almacenamos An á en minusculas en la variable letra
+            //console.log(directo3)
+            if (letra === 'á'){ //si letra tiene una á
+                input_sinespacios = input_sinespacios + "a"; //transformalo en una simple
+            } else if (letra !== " ") { // si no, si variable letra no tiene espacios
+                input_sinespacios =  input_sinespacios + letra ; //almacenalo en input_sinespacios
+            }
+        }
+
+        for(var i=0; i < input_sinespacios.length; i++) { //recorremos input_sinespacios
+            inversa3 = input_sinespacios.charAt(i) + inversa3; //lo almacenamos en inversa3
+        }
+        //console.log(input_sinespacios);
+        //console.log(inversa3);
+
+        if (input_sinespacios.toLocaleLowerCase === inversa3.toLocaleLowerCase){ //si input_sinespacios es igual a inversa3
+            console.log("Palindromo es de nivel 3");
+         } else {
+            console.log("Palindromo no es de nivel 3");
+         }
+
+         
+         
+    </script>
+</body>
+</html>

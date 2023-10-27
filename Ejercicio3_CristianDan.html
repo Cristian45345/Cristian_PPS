@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var cancion = "Una mosca volava per la llum"; // variable con la frase
+      var transformacion = ""; // variable que lo transforma
+      function tratarCancion(letra) {
+        // funcion para recorrer cada vocal
+        for (var i = 0; i < cancion.length; i++) {
+          // recorremos el contenido de la variable de cancion
+          cancion = cancion.toLocaleLowerCase(i); // transformamos cancion en minusculas
+          //console.log(cancion);
+          if (
+            cancion.charAt(i) === "a" || //si cancion es igual a a
+            cancion.charAt(i) === "e" || //si cancion es igual a e
+            cancion.charAt(i) === "i" || //si cancion es igual a i
+            cancion.charAt(i) === "o" || //si cancion es igual a o
+            cancion.charAt(i) === "u" //si cancion es igual a u
+          ) {
+            transformacion = transformacion + letra; //transformacion almacena la letra que especificamos
+            //console.log(transformacion);
+          } else {
+            //si no
+            transformacion = transformacion + cancion.charAt(i); // transformacion guarda lo que tenia + la letra que tocaba en cancion
+            //console.log(transformacion);
+          }
+        }
+        console.log(transformacion); //mostramos transformacion
+        transformacion = ""; //lo vaciamos para evitar bucles
+      }
+      tratarCancion("a"); //la funcion tratarcacion vale a
+      tratarCancion("e"); //la funcion tratarcacion vale e
+      tratarCancion("i"); //la funcion tratarcacion vale i
+      tratarCancion("o"); //la funcion tratarcacion vale o
+      tratarCancion("u"); //la funcion tratarcacion vale u
+    </script>
+  </body>
+</html>
